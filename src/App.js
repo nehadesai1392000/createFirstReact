@@ -1,15 +1,15 @@
 import './App.css';
 import Navbar from './componate/Navbar';
 import TextForm from './componate/TextForm';
-import About from './componate/About';
+// import About from './componate/About';
 import { useState } from 'react';
 import Alert from './componate/Alert';
-import {
-  BrowserRouter,
-  Link,
-  Route,
-  Routes,
-} from "react-router-dom";
+// import {
+//   BrowserRouter,
+//   Link,
+//   Route,
+//   Routes,
+// } from "react-router-dom";
 
 
 function App() {
@@ -74,14 +74,15 @@ function App() {
   return (
     <>
 
-     <BrowserRouter>
+     {/* <BrowserRouter> */}
       <Navbar mode={mode} toggleMode={toggleMode} toggleSecondaryMode={toggleSecondaryMode} toggleSuccessMode={toggleSuccessMode} toggleDangerMode={toggleDangerMode} toggleWarningMode={toggleWarningMode} />
       <Alert alert={alert} />
-      <Routes>
+      <TextForm heading={"Try TextUtils - Word Counter, character, Remove extra Spaces"} mode={mode} showAlert={showAlert}/>
+      {/* <Routes>
         <Route path="/" element={< TextForm heading={"Enter the text to analyze below"} mode={mode} showAlert={showAlert}/>} />
         <Route path="/about" element={<About />} />
-      </Routes>
-    </BrowserRouter>
+      </Routes> */}
+    {/* </BrowserRouter> */}
 
 
     </>
